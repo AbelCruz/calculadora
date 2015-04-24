@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="js/jquery.mobile-1.3.2.min.css">
-<script src="js/jquery.js"></script>
-<script src="js/jquery.mobile-1.3.2.min.js"></script>
+	<title>JQM Calculator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<link href="content/jquery.mobile-1.1.0.min.css" rel="stylesheet" type="text/css" />
+	<script src="scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+	<script src="scripts/jquery.mobile-1.1.0.min.js" type="text/javascript"></script>
 </head>
 <body>
-<div data-role="page">
-  <div data-role="header">
-    <h1>Calculadora Básica</h1>
-  </div>
-  <div data-role="content">
-    <form action="" method="post" id="frmsuma">
-        <label for="numero1">Numero 1 :</label>
-        <input type="text" name="numero1" id="numero1">
-        <label for="numero2">Numero 2 :</label>
-        <input type="text" name="numero2" id="numero2">
-        <input type="submit" id="btnSumar" data-inline="true" value="Sumar">
-        <input type="submit" id="btnRestar" data-inline="true" value="Restar">
-        <input type="submit" id="btnMultiplicar" data-inline="true" value="Multiplicar">
-        <input type="submit" id="btnDividir" data-inline="true" value="Dividir">
-    </form>
-    <div id="resultado"></div>
-  </div>
-  <div data-role="footer">
-    <h1></h1>
-  </div>
-</div>
-<script src="js/operacion.js"></script>
+	<div id="calculator" data-role="page" data-theme="a" data-rockncoder-jspage="calculator">
+		<header data-role="header">
+			<h1>Calculadora</h1>
+		</header>
+		<section data-role="content" >
+			<input type="text"  id="displayControl" style="text-align: center;" value="0" />
+			<div class="ui-grid-a">
+				<div class="ui-block-a"><button data-theme="a" id="keyC" data-rockncoder-tag="C">C</button></div>
+			</div>
+			<div class="ui-grid-c">
+				<div class="ui-block-a"><button data-theme="b" id="key7" data-rockncoder-tag="7">7</button></div>
+				<div class="ui-block-b"><button data-theme="b" id="key8" data-rockncoder-tag="8" >8</button></div>
+				<div class="ui-block-c"><button data-theme="b" id="key9" data-rockncoder-tag="9" >9</button></div>
+				<div class="ui-block-d"><button data-theme="e" id="keyDivide" >/</button></div>
+				<div class="ui-block-a"><button data-theme="b" id="key4" data-rockncoder-tag="4" >4</button></div>
+				<div class="ui-block-b"><button data-theme="b" id="key5" data-rockncoder-tag="5" >5</button></div>
+				<div class="ui-block-c"><button data-theme="b" id="key6" data-rockncoder-tag="6" >6</button></div>
+				<div class="ui-block-d"><button data-theme="e" id="keyMultiply" >*</button></div>
+				<div class="ui-block-a"><button data-theme="b" id="key1" data-rockncoder-tag="1" >1</button></div>
+				<div class="ui-block-b"><button data-theme="b" id="key2" data-rockncoder-tag="2" >2</button></div>
+				<div class="ui-block-c"><button data-theme="b" id="key3" data-rockncoder-tag="3" >3</button></div>
+				<div class="ui-block-d"><button data-theme="e" id="keySubtract" >-</button></div>
+				<div class="ui-block-a"><button data-theme="e" id="keyDecimalPoint" data-rockncoder-tag=".">.</button></div>
+				<div class="ui-block-b"><button data-theme="b" id="key0" data-rockncoder-tag="0" >0</button></div>
+				<div class="ui-block-c"><button data-theme="e" id="keyEquals" >=</button></div>
+				<div class="ui-block-d"><button data-theme="e" id="keyAdd" >+</button></div>
+			</div>
+		</section>
+	</div>
+	<script src="scripts/app.js" type="text/javascript"></script>
 </body>
 </html>
